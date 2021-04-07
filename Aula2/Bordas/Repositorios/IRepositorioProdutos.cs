@@ -9,6 +9,6 @@ namespace Aula2.Bordas.Repositorios
 {
     public interface IRepositorioProdutos
     {
-        public void Add(Produto request);
+        public int Add(Produto request);
     }
 }

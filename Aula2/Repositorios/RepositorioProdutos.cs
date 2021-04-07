@@ -18,10 +18,11 @@ namespace Aula2.Repositorios
             _local = local;
         }
 
-        public void Add(Produto request)
+        public int Add(Produto request)
         {
             _local.produto.Add(request);
             _local.SaveChanges();
+            return request.id;
         }
     }
 }

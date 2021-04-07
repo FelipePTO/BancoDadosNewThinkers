@@ -35,6 +35,7 @@ namespace Aula2.UseCase
                 var produtoAdicionar = _adapter.converterRequestParaProduto(request);
                 _repositorioProdutos.Add(produtoAdicionar);
                 response.msg = "Adicionado com sucesso";
+                response.id = produtoAdicionar.id;
                 return response;
             }
             catch
