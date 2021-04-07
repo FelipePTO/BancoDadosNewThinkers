@@ -1,5 +1,7 @@
-﻿using Aula2.Entities;
+﻿using Aula2.DTO.Produto.AdicionarProduto;
+using Aula2.Entities;
 using Aula2.Services;
+using Aula2.UseCase;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -16,11 +18,13 @@ namespace Aula2.Controllers
  
         private readonly ILogger<ProdutoController> _logger;
         private readonly IProdutoService _produto;
+        private readonly IAdicionarProdutoUseCase _adicionarProdutoUseCase;
 
-        public ProdutoController(ILogger<ProdutoController> logger, IProdutoService produto)
+        public ProdutoController(ILogger<ProdutoController> logger, IProdutoService produto, IAdicionarProdutoUseCase adicionarProdutoUseCase)
         {
             _logger = logger;
             _produto = produto;
+            _adicionarProdutoUseCase = adicionarProdutoUseCase;
         }
 
         [HttpGet]
@@ -36,9 +40,9 @@ namespace Aula2.Controllers
         }
 
         [HttpPost]
-        public IActionResult produtoAdd([FromBody] Produto novoProduto)
+        public IActionResult produtoAdd([FromBody] AdicionarProdutoRequest novoProduto)
         {
-            return Ok(_produto.AdicionarProduto(novoProduto));
+            return Ok(_adicionarProdutoUseCase.Executar(novoProduto));
         }
 
         [HttpPut]

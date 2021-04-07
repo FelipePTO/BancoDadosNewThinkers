@@ -1,5 +1,10 @@
+using Aula2.Adapter;
+using Aula2.Bordas.Adapter;
+using Aula2.Bordas.Repositorios;
 using Aula2.Context;
+using Aula2.Repositorios;
 using Aula2.Services;
+using Aula2.UseCase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +37,18 @@ namespace Aula2
             (Configuration.GetConnectionString("urlSquadra")));
 
             services.AddScoped<IProdutoService, ProdutoService>();
+
+            services.AddScoped<IAdicionarProdutoUseCase, AdicionarProdutoUseCase>();
+            services.AddScoped<IAtualizarProdutoUseCase, AtualizarProdutoUseCase>();
+            services.AddScoped<IRemoverProdutoUseCase, RemoverProdutoUseCase>();
+            services.AddScoped<IRetornarListadeProdutosUseCase, RetornarListadeProdutosUseCase>();
+            services.AddScoped<IRetornarProdutosPorIdUseCase, RetornarProdutosPorIdUseCase>();
+
+            services.AddScoped<IRepositorioProdutos, RepositorioProdutos>();
+            services.AddScoped<IAdicionarProdutoAdapter, AdicionarProdutoAdapter>();
+            
+
+
 
             services.AddControllers();
         }
