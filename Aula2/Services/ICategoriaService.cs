@@ -6,13 +6,13 @@ using aula2.entities;
 
 namespace aula2.services
 {
-    public interface IProdutoService
+    public interface ICategoriaService
     {
 
-        bool AdicionarCategoria(Categoria Categoria);
-        List<Produto> RetornarListadeCategoria();
+        bool AdicionarCategoria(Categoria categoria);
+        List<Categoria> RetornarListadeCategoria();
         Produto RetornarCategoriaporId(int id);
-        bool AtualizarProduto(Categoria categoria);
+        bool AtualizarCategoria(Categoria categoria);
         bool DeletarCategoria(int id);
 
 

@@ -4,12 +4,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Aula2.Entities
+namespace aula2.entities
 {
-    public class Categoria
+    public class Produto
     {
         [Key]
         public int id { get; set; }
-        public string categorianome { get; set; }
+
+        public String nome { get; set; }
+
+        public String descricao { get; set; }
+
+        public double valor { get; set; }
+
     }
 }

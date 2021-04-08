@@ -1,0 +1,17 @@
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.csprojAssemblyReference.cache
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.AssemblyInfoInputs.cache
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.AssemblyInfo.cs
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.csproj.CoreCompileInputs.cache
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.RazorAssemblyInfo.cache
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.RazorAssemblyInfo.cs
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\bin\Debug\netcoreapp2.1\aula2.deps.json
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\bin\Debug\netcoreapp2.1\aula2.runtimeconfig.json
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\bin\Debug\netcoreapp2.1\aula2.runtimeconfig.dev.json
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\bin\Debug\netcoreapp2.1\aula2.dll
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\bin\Debug\netcoreapp2.1\aula2.pdb
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.RazorTargetAssemblyInfo.cache
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.dll
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.pdb
+C:\Users\kerle\Google Drive\notebook kerley\TI\newThinkers\dotnet\atv2\aula2\aula2\obj\Debug\netcoreapp2.1\aula2.genruntimeconfig.cache
