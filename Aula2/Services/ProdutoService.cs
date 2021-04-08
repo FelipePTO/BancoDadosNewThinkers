@@ -1,31 +1,30 @@
-﻿using Aula2.Context;
-using Aula2.Entities;
+﻿using aula2.context;
+using aula2.entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Aula2.Services
+namespace aula2.services
 {
     public class ProdutoService : IProdutoService
     {
+        private readonly LocalDBContext _local;
 
-        private readonly LocalDbContext _local;
-
-        public ProdutoService(LocalDbContext local)
+        public ProdutoService(LocalDBContext local)
         {
             _local = local;
         }
 
-        public bool AdicionarProduto(Produto produto)
+        bool IProdutoService.AdicionarProduto(Produto produto)
         {
             _local.produto.Add(produto);
             _local.SaveChanges();
             return true;
         }
 
-        public bool AtualizarProduto(Produto novoProduto)
+        bool IProdutoService.AtualizarProduto(Produto novoProduto)
         {
             _local.produto.Attach(novoProduto);
             _local.Entry(novoProduto).State = EntityState.Modified;
@@ -33,20 +32,20 @@ namespace Aula2.Services
             return true;
         }
 
-        public bool DeletarProduto(int id)
+        bool IProdutoService.DeletarProduto(int id)
         {
-            var objApagar = _local.produto.Where(d => d.id == id).FirstOrDefault();
-            _local.produto.Remove(objApagar);
+            var objetoApagar = _local.produto.Where(d => d.id == id).FirstOrDefault();
+            _local.produto.Remove(objetoApagar);
             _local.SaveChanges();
             return true;
         }
 
-        public List<Produto> RetonarListaProduto()
+        List<Produto> IProdutoService.RetornarListadeProdutos()
         {
             return _local.produto.ToList();
         }
 
-        public Produto RetornarProdutoPorId(int id)
+        Produto IProdutoService.RetornarProdutopoId(int id)
         {
             return _local.produto.Where(d => d.id == id).FirstOrDefault();
         }
