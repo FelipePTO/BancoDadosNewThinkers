@@ -13,5 +13,6 @@ namespace Aula2.Entities
         public string nome { get; set; }
         public string descricao { get; set; }
         public int valor { get; set; }
+        public int tamanho{ get; set; }
     }
 }

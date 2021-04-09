@@ -46,6 +46,9 @@ namespace Aula2.Migrations
                     b.Property<string>("nome")
                         .HasColumnType("text");
 
+                    b.Property<int>("tamanho")
+                        .HasColumnType("integer");
+
                     b.Property<int>("valor")
                         .HasColumnType("integer");
 

@@ -33,8 +33,8 @@ namespace Aula2.UseCase
                 }
 
                 var produtoAdicionar = _adapter.converterRequestParaProduto(request);
-                _repositorioProdutos.Add(produtoAdicionar);
-                response.msg = "Adicionado com sucesso";
+                var id = _repositorioProdutos.Add(produtoAdicionar);
+                response.msg = "Produto adicionado com sucesso";
                 response.id = produtoAdicionar.id;
                 return response;
             }

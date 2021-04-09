@@ -7,5 +7,6 @@ namespace Aula2.DTO.Produto.RemoverProduto
 {
     public class RemoverProdutoRequest
     {
+        public int id { get; set; }
     }
 }

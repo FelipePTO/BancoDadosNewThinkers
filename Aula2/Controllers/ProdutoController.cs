@@ -1,4 +1,5 @@
 ﻿using Aula2.DTO.Produto.AdicionarProduto;
+using Aula2.DTO.Produto.RemoverProduto;
 using Aula2.Entities;
 using Aula2.Services;
 using Aula2.UseCase;
@@ -19,12 +20,18 @@ namespace Aula2.Controllers
         private readonly ILogger<ProdutoController> _logger;
         private readonly IProdutoService _produto;
         private readonly IAdicionarProdutoUseCase _adicionarProdutoUseCase;
+        private readonly IRemoverProdutoUseCase _removerProdutoUseCase;
 
-        public ProdutoController(ILogger<ProdutoController> logger, IProdutoService produto, IAdicionarProdutoUseCase adicionarProdutoUseCase)
+        public ProdutoController(
+            ILogger<ProdutoController> logger, 
+            IProdutoService produto, 
+            IAdicionarProdutoUseCase adicionarProdutoUseCase, 
+            IRemoverProdutoUseCase removerProdutoUseCase)
         {
             _logger = logger;
             _produto = produto;
             _adicionarProdutoUseCase = adicionarProdutoUseCase;
+            _removerProdutoUseCase = removerProdutoUseCase;
         }
 
         [HttpGet]
@@ -55,9 +62,10 @@ namespace Aula2.Controllers
         [HttpDelete("{id}")]
         public IActionResult produtoDelete(int id)
         {
-            return Ok(_produto.DeletarProduto(id));
+            var request = new RemoverProdutoRequest();
+            request.id = id;
+            return Ok(_removerProdutoUseCase.Executar(request));
         }
-
 
 
     }
